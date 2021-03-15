@@ -1,5 +1,5 @@
-class AirportController < ApplicationController
-  include AirportHelper
+class AirportsController < ApplicationController
+  include AirportsHelper
   def index
     @airports = Airport.all
   end
