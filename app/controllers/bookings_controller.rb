@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  include BookingsHelper
   def new
     @booking = Booking.new
     @selected_flight = Flight.find(params[:flight])
