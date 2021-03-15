@@ -1,8 +1,11 @@
 <%= render 'search_form' %>
+<br/>
+<% unless @available_flights.nil? %>
+  <% if @available_flights.any? %>
+    <%= render 'search_results_form'%>
 
-<% if @available_flights.any ? %>
-  <%= render 'search_results_form'%>
+  <% else %>
+    <p>There are no available flights</p>
+  <% end %>
 
-<% else %>
-  <p>There are no available flights</p>
 <% end %>
